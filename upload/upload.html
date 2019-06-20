@@ -42,7 +42,7 @@ body, html {
   color: #069;
 }
 </style>
-<script src="https://github.com/syntagmatic/parallel-coordinates/blob/master/examples/lib/d3.min.js"></script>
+<script src="https://github.com/syntagmatic/parallel-coordinates/blob/master/examples/lib/d3.v5.min.js"></script>
 <script src="https://github.com/syntagmatic/parallel-coordinates/blob/master/d3.parcoords.js"></script>
 <script src="https://github.com/syntagmatic/parallel-coordinates/blob/master/examples/lib/divgrid.js"></script>
 <input type="file" id="uploader">
@@ -50,7 +50,7 @@ body, html {
 <div id="grid"></div>
 <div id="pager"></div>
 <script>
-var parcoords = d3.parcoords()("#example")
+var parcoords = Parcoords()("#example")
   .alpha(0.4)
   .mode("queue") // progressive rendering
   .height(d3.max([document.body.clientHeight-326, 220]))
