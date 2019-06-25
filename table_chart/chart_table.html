@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('number', 'Amount');
+        data.addColumn('boolean', 'true/False');
+        data.addRows([
+          ['Person 1',  {v: 10000, f: '10,000'}, true],
+          ['Person 2',   {v:8000,   f: '8,000'},  false],
+          ['Person 3', {v: 12000, f: '12,000'}, false],
+          ['Person 4',   {v: 6000,  f: '6,000'},  true]
+        ]);
+        
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true, width: '40%', height: '25%'});
+      }
+    </script>
+  </head>
+  <body style="background-color: lightgrey; color:red;">
+    <h1 style="text-align: center; color: black;">EduWaive Foundation</h1>
+    <hr>
+    <div  id="table_div"></div>
+    <div style="color:black;">
+      <h1>About Data</h1>
+      <p>lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+    </div>
+   <!-- <footer style="text-align: center; background-color: green;">The tabular Chart</footer> -->
+  </body>
+</html>
